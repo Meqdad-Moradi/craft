@@ -1,0 +1,19 @@
+:root {
+   --bs-blue: #0d6efd;
+   --bs-indigo: #6610f2;
+   --bs-purple: #6f42c1;
+   --bs-pink: #d63384;
+   --bs-red: #dc3545;
+   --poppins: "Poppins", sans-serif;
+}
+
+html {
+   scroll-behavior: smooth;
+   scroll-padding-top: 80px;
+}
+
+body {
+   font-size: 1rem;
+   font-weight: 400;
+   font-family: var(--poppins);
+}
