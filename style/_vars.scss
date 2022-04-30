@@ -1,0 +1,16 @@
+@mixin grid() {
+   display: grid;
+   gap: 3em;
+   grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
+   justify-content: space-between;
+   align-items: center;
+}
+
+@mixin flex($fd: row) {
+   display: flex;
+   flex-direction: $fd;
+   flex-wrap: nowrap;
+   justify-content: space-between;
+   align-items: center;
+   gap: 3em;
+}

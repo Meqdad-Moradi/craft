@@ -1,0 +1,30 @@
+#header {
+   min-height: 100vh;
+   //    background-color: var(--bs-purple);
+   @include flex(column);
+
+   .nav {
+      @include flex();
+      height: 80px;
+   }
+
+   .nav-list {
+      @extend .nav;
+   }
+
+   .start-btn {
+      .btn {
+         --bs-indigo: var(--bs-white);
+         margin-top: 0;
+         color: var(--bs-dark);
+
+         &:hover {
+            color: var(--bs-white);
+         }
+      }
+   }
+
+   .showcase {
+      margin-top: 15em;
+   }
+}
