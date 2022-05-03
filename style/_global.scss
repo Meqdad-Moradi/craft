@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@200;300;400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@200;300;400;500;600;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Rubik:wght@300;400;500;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap");
 
@@ -10,12 +10,12 @@
    --bs-red: hsl(354, 70%, 54%);
    --bs-white: hsl(0, 0%, 100%);
    --bs-light: hsl(210, 17%, 98%);
-   --bs-light-blue: hsl(210, 37%, 97%);
+   --bs-light-blue: hsl(218, 27%, 94%);
    --bs-dark: hsl(240, 4%, 9%);
    --bs-dark-blue: hsl(210, 67%, 9%);
-   --bs-gray: hsl(240, 8%, 21%);
+   --bs-gray: hsl(240, 6%, 29%);
 
-   --spartan: 'League Spartan', sans-serif;
+   --spartan: "League Spartan", sans-serif;
    --montserrat: "Montserrat", sans-serif;
    --rubik: "Rubik", sans-serif;
 
@@ -58,7 +58,6 @@ h3,
 h4,
 h5,
 h6 {
-   font-family: var(--montserrat);
    font-weight: 500;
    line-height: 1;
 }
@@ -98,10 +97,10 @@ footer {
 }
 
 .btn {
-    --border-radius: 50px;
+   --border-radius: 50px;
    display: inline-block;
    margin-top: 2em;
-   padding: .8em 1.5em;
+   padding: 0.8em 1.5em;
    text-transform: capitalize;
    background-color: var(--bs-indigo);
    color: var(--bs-white);
@@ -120,6 +119,7 @@ footer {
 
 .title {
    font-size: clamp(2rem, 3vw, 3.375rem);
+   font-family: var(--montserrat);
 }
 
 .sub-title {
@@ -132,7 +132,7 @@ footer {
    margin-bottom: 2em;
    text-align: center;
 
-   h3{
+   h3 {
       margin-bottom: 1em;
       color: var(--bs-indigo);
       text-transform: capitalize;
@@ -140,11 +140,11 @@ footer {
       font-weight: 500;
    }
 
-   .title{
+   .title {
       text-transform: capitalize;
    }
 
-   .sub-title{
+   .sub-title {
       max-width: 60%;
       margin-inline: auto;
    }
