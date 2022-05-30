@@ -29,7 +29,7 @@
          content: "";
          height: 100%;
          width: 100%;
-
+         --border-radius: 1.5em;
          border-radius: var(--border-radius);
          background-color: var(--bs-light-blue);
          opacity: 0.3;
@@ -42,6 +42,7 @@
    }
 
    .main-title {
+      // --border-radius: 1.5em;
       @include flex(column);
       position: absolute;
       height: 90%;
@@ -58,6 +59,8 @@
          background-color: var(--bs-indigo);
          color: var(--bs-white);
          line-height: 0;
+         outline: none;
+         border: none;
          border-radius: 100%;
          font-size: clamp(1.5rem, 3vw, 3rem);
          height: 2em;
@@ -67,6 +70,7 @@
          place-content: center;
          transition: var(--transition);
          position: relative;
+         cursor: pointer;
 
          i {
             padding-left: 6px;
@@ -97,10 +101,10 @@
    50% {
       height: 2.5em;
       width: 2.5em;
-      opacity: .2;
+      opacity: 0.2;
    }
 
-   100%{
+   100% {
       opacity: 0;
    }
 }
