@@ -18,7 +18,7 @@
    <body>
       <header id="header">
          <div class="container">
-            <nav class="nav">
+            <nav class="nav" id="nav">
                <!-- logo -->
                <div class="logo">
                   <a href="./index.html">crafton</a>
@@ -255,10 +255,25 @@
                   available, but the majority have suffered alteration in some
                   form.
                </p>
-               <button class="play-btn">
+               <button class="play-btn" id="play-btn">
                   <i class="fa-solid fa-play"></i>
                </button>
             </div>
+         </div>
+      </section>
+
+      <!-- video -->
+      <section id="video-container">
+         <div class="container">
+            <iframe
+               width="100%"
+               height="615"
+               src="https://www.youtube.com/embed/sMWz7y6elOE"
+               title="YouTube video player"
+               frameborder="0"
+               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+               allowfullscreen
+            ></iframe>
          </div>
       </section>
       <!-- end of video -->
@@ -266,7 +281,7 @@
       <!-- cta section -->
       <section id="cta">
          <div class="container">
-            <h1>Hire me</h1>
+            <h1 class="title">Hire me</h1>
             <a href="#" class="btn">hire me</a>
          </div>
       </section>

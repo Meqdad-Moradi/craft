@@ -34,6 +34,15 @@
       height: 80px;
       z-index: 2;
 
+      &.fixed {
+         position: fixed;
+         width: 100vw;
+         top: 0;
+         left: 0;
+         z-index: 10000;
+         background-color: var(--bs-dark-blue);
+      }
+
       .logo {
          a {
             font-size: 1.5rem;
