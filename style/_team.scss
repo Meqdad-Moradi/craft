@@ -1,0 +1,63 @@
+#team {
+   .cards {
+      @include grid();
+      grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
+      margin-top: 5em;
+   }
+
+   .card {
+      text-align: center;
+
+      &:hover .avatar-social {
+         transform: translateY(0);
+         opacity: 1;
+      }
+   }
+
+   .avatar {
+      width: 200px;
+      height: 200px;
+      overflow: hidden;
+      border-radius: 100%;
+      margin-inline: auto;
+      outline: 1px solid var(--bs-light-blue);
+      outline-offset: 0.8em;
+
+      img {
+         height: 100%;
+         object-fit: cover;
+      }
+   }
+
+   .avatar-details {
+      margin-top: 3em;
+
+      h2 {
+         font-family: var(--spartan);
+         font-size: 1.25rem;
+         text-transform: capitalize;
+      }
+
+      p {
+         margin-top: 0.5em;
+      }
+   }
+
+   .avatar-social {
+      margin-top: .7em;
+      transform: translateY(-20px);
+      opacity: 0;
+      transition: var(--transition);
+
+      a {
+         font-size: 1.25rem;
+         display: inline-block;
+         margin: 0 0.4em;
+         color: var(--bs-gray);
+
+         &:hover {
+            color: var(--bs-indigo);
+         }
+      }
+   }
+}
