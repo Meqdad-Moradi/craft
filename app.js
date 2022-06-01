@@ -22,3 +22,13 @@ videoContainer.addEventListener("click", (e) => {
       e.currentTarget.classList.remove("show");
    }
 });
+
+// FAQ
+const faqTitles = [...document.querySelectorAll("#faq-body .details")];
+
+faqTitles.forEach((faq, i) =>
+   faq.addEventListener("click", (e) => {
+      faqTitles.forEach((faq) => faq.classList.remove("active"));
+      e.currentTarget.classList.toggle("active");
+   })
+);
