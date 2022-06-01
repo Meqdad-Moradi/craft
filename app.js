@@ -7,19 +7,6 @@ navLinks.forEach((link) =>
    })
 );
 
-// fixed header
-const nav = document.querySelector("#nav");
-
-window.addEventListener("scroll", (e) => {
-   const scrollY = window.scrollY;
-
-   if (scrollY > 0) {
-      nav.classList.add("fixed");
-   } else {
-      nav.classList.remove("fixed");
-   }
-});
-
 // video show & hide
 const videoContainer = document.querySelector("#video-container");
 const playBtn = document.querySelector("#play-btn");

@@ -1,3 +1,7 @@
-#footer{
-    background-color: var(--bs-dark-blue);
+#footer {
+   background-color: var(--bs-dark-blue);
+   p {
+      --bs-light: hsl(223, 16%, 68%);
+      color: var(--bs-light);
+   }
 }
