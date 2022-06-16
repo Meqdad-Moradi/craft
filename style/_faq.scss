@@ -13,6 +13,7 @@
    }
 
    .faq-title {
+      --transition: background-color 200ms ease-in-out;
       background-color: var(--bs-white);
       cursor: pointer;
       padding: 1.5em;
@@ -35,9 +36,7 @@
    .faq-main {
       --transition: max-height 0.4s ease-in-out;
       background-color: var(--bs-white);
-      max-height: 0;
-      overflow: hidden;
-      transition: var(--transition);
+      display: none;
 
       p {
          margin-top: 0;
@@ -71,8 +70,7 @@
       }
 
       .faq-main {
-         max-height: 100%;
-         overflow: auto;
+         display: block;
       }
    }
 }
