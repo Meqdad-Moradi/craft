@@ -16,6 +16,7 @@
       background-color: var(--bs-white);
       cursor: pointer;
       padding: 1.5em;
+      transition: var(--transition);
 
       h3 {
          position: relative;
@@ -32,16 +33,26 @@
    }
 
    .faq-main {
-      padding: 1.5em;
+      --transition: max-height 0.4s ease-in-out;
       background-color: var(--bs-white);
+      max-height: 0;
+      overflow: hidden;
       transition: var(--transition);
-      display: none;
 
       p {
          margin-top: 0;
+         padding: 0 1.5em;
 
          &:not(:first-child) {
             margin-top: 1em;
+         }
+
+         &:first-child {
+            padding-top: 1.5em;
+         }
+
+         &:last-child {
+            padding-bottom: 1.5em;
          }
       }
    }
@@ -60,7 +71,8 @@
       }
 
       .faq-main {
-         display: block;
+         max-height: 100%;
+         overflow: auto;
       }
    }
 }

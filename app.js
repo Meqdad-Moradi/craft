@@ -36,11 +36,18 @@ videoContainer.addEventListener("click", (e) => {
 });
 
 // FAQ
-const faqTitles = [...document.querySelectorAll("#faq-body .details")];
+const faqTitles = document.querySelectorAll("#faq-body .details");
 
 faqTitles.forEach((faq, i) =>
    faq.addEventListener("click", (e) => {
-      faqTitles.forEach((faq) => faq.classList.remove("active"));
-      e.currentTarget.classList.toggle("active");
+      // if it does have active class, then remove it. if not add the active class
+      if (faq.classList.contains("active")) {
+         e.currentTarget.classList.remove("active");
+      } else {
+         // first remove all active class
+         faqTitles.forEach((faq) => faq.classList.remove("active"));
+         // add active class to the current target
+         e.currentTarget.classList.add("active");
+      }
    })
 );
