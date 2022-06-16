@@ -17,7 +17,7 @@
   --montserrat: "Montserrat", sans-serif;
   --rubik: "Rubik", sans-serif;
   --border-radius: 1em;
-  --transition: all 0.4s ease-in-out;
+  --transition: all 0.3s ease-in-out;
 }
 
 /* Box sizing rules */
@@ -541,6 +541,9 @@ footer {
   transform: translateY(0);
   opacity: 1;
 }
+#team .card:hover .avatar {
+  outline-color: var(--bs-indigo);
+}
 #team .avatar {
   aspect-ratio: 1/1;
   overflow: hidden;
@@ -548,6 +551,7 @@ footer {
   margin-inline: auto;
   outline: 1px solid var(--bs-light-blue);
   outline-offset: 0.8em;
+  transition: var(--transition);
 }
 #team .avatar img {
   aspect-ratio: 1/1;
