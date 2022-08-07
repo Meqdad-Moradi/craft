@@ -156,12 +156,15 @@ const slideLeft = () => {
 
    if (sliderCounter < 0) {
       sliderCounter = 0;
+
       return;
    }
 
    testimonialsContainer.style.transform = `translateX(-${
       (slideWidth + 16) * sliderCounter
    }px)`;
+
+   checkSlideBtn();
 };
 
 const slideRight = () => {
@@ -175,7 +178,28 @@ const slideRight = () => {
    testimonialsContainer.style.transform = `translateX(-${
       (slideWidth + 16) * sliderCounter
    }px)`;
+
+   checkSlideBtn();
 };
+
+// check where is the slide and enable or disable the buttons
+function checkSlideBtn() {
+   // disable or enable prev button
+   if (sliderCounter === 0) {
+      slideBtnPrev.disabled = true;
+   } else {
+      slideBtnPrev.disabled = false;
+   }
+
+   // disable or enable the next button
+   if (sliderCounter >= testimonials.length - 2) {
+      slideBtnNext.disabled = true;
+   } else {
+      slideBtnNext.disabled = false;
+   }
+}
+
+checkSlideBtn();
 
 slideBtnNext.addEventListener("click", slideRight);
 slideBtnPrev.addEventListener("click", slideLeft);

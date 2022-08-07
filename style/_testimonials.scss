@@ -68,6 +68,16 @@
       }
    }
 
+   .quete {
+      font-size: 6rem;
+      position: absolute;
+      bottom: 0;
+      right: 10%;
+      opacity: 0.05;
+      color: var(--bs-indigo);
+      user-select: none;
+   }
+
    .slide-btn-container {
       display: flex;
       flex-direction: row;
@@ -94,6 +104,10 @@
 
       &:active {
          background-color: var(--bs-pink);
+      }
+
+      &:disabled {
+         opacity: 0.5;
       }
    }
 }
