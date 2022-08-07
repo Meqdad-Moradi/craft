@@ -158,7 +158,7 @@ const slideLeft = () => {
       sliderCounter = 0;
       return;
    }
-   console.log(sliderCounter);
+
    testimonialsContainer.style.transform = `translateX(-${
       (slideWidth + 16) * sliderCounter
    }px)`;
@@ -171,8 +171,6 @@ const slideRight = () => {
       sliderCounter = testimonials.length - 2;
       return;
    }
-
-   console.log(sliderCounter);
 
    testimonialsContainer.style.transform = `translateX(-${
       (slideWidth + 16) * sliderCounter
