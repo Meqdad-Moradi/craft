@@ -140,6 +140,13 @@
    background-color: rgba(0, 0, 0, 0.8);
 
    &.show {
-      display: block;
+      // display: block;
+      display: grid;
+      place-content: center;
+   }
+
+   #video {
+      max-width: 100%;
+      
    }
 }

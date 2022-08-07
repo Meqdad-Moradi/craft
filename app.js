@@ -22,6 +22,7 @@ filterBtns.forEach((btn) =>
 // video show & hide
 const videoContainer = document.querySelector("#video-container");
 const playBtn = document.querySelector("#play-btn");
+const myVideo = document.querySelector("#video");
 
 playBtn.addEventListener("click", () => {
    videoContainer.classList.add("show");
@@ -32,6 +33,10 @@ videoContainer.addEventListener("click", (e) => {
       return;
    } else {
       e.currentTarget.classList.remove("show");
+   }
+
+   if (myVideo.play()) {
+      myVideo.pause();
    }
 });
 
@@ -120,8 +125,59 @@ const readDatas = () => {
    worksCard.innerHTML = works;
 };
 
-// 
+// load data when ever the page loaded
 
-window.addEventListener('DOMContentLoaded', ()=>{
-   readDatas()
-})
+window.addEventListener("DOMContentLoaded", () => {
+   readDatas();
+   testimonialsSlider();
+});
+
+// testimonials section
+// read some data from html
+
+const testimonials = document.querySelectorAll("#testimonials .card");
+const testimonialsContainer = document.querySelector("#slide-container");
+const slideBtnNext = document.querySelector("#slide-next");
+const slideBtnPrev = document.querySelector("#slide-left");
+let sliderCounter = 0;
+const slideWidth = testimonials[0].getBoundingClientRect().width;
+
+const testimonialsSlider = () => {
+   testimonials.forEach((item, index) => {
+      item.style.transform = `translateX(${100 * index}%)`;
+      item.style.left = `${index * 1}em`;
+
+      // console.log(item.offsetWidth);
+   });
+};
+
+const slideLeft = () => {
+   sliderCounter--;
+
+   if (sliderCounter < 0) {
+      sliderCounter = 0;
+      return;
+   }
+   console.log(sliderCounter);
+   testimonialsContainer.style.transform = `translateX(-${
+      (slideWidth + 16) * sliderCounter
+   }px)`;
+};
+
+const slideRight = () => {
+   sliderCounter++;
+
+   if (sliderCounter >= testimonials.length - 1) {
+      sliderCounter = testimonials.length - 2;
+      return;
+   }
+
+   console.log(sliderCounter);
+
+   testimonialsContainer.style.transform = `translateX(-${
+      (slideWidth + 16) * sliderCounter
+   }px)`;
+};
+
+slideBtnNext.addEventListener("click", slideRight);
+slideBtnPrev.addEventListener("click", slideLeft);

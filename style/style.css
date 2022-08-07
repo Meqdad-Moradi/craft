@@ -44,7 +44,6 @@ body {
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.7;
-  overflow-x: hidden;
   color: var(--bs-dark);
   background-color: var(--bs-light);
 }
@@ -521,7 +520,11 @@ footer {
   background-color: rgba(0, 0, 0, 0.8);
 }
 #video-container.show {
-  display: block;
+  display: grid;
+  place-content: center;
+}
+#video-container #video {
+  max-width: 100%;
 }
 
 #team .cards {
@@ -591,20 +594,29 @@ footer {
   background-color: var(--bs-light-blue);
 }
 #testimonials .testimonials-body {
-  display: grid;
-  gap: 2em;
-  grid-template-columns: repeat(auto-fit, minmax(18.75em, 1fr));
-  justify-content: space-between;
-  align-items: center;
-  grid-template-columns: repeat(auto-fit, minmax(30em, 1fr));
   margin-top: 4em;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+#testimonials #slide-container {
+  position: relative;
+  width: 100%;
+  max-height: 16em;
+  min-height: 16em;
+  max-height: 16em;
+  min-height: 16em;
+  transition: transform 0.5s ease;
 }
 #testimonials .card {
   background-color: var(--bs-light);
   padding: 2em;
-  position: relative;
   overflow: hidden;
   border-radius: var(--border-radius);
+  width: calc(50% - 0.5em);
+  position: absolute;
+  inset: 0;
+  transition: all 0.4s ease;
 }
 #testimonials .card::after {
   content: "";
@@ -645,6 +657,9 @@ footer {
   margin-top: 0;
 }
 
+#faq {
+  clear: both;
+}
 #faq .faq-body {
   margin-top: 4em;
 }
